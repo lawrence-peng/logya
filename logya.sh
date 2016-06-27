@@ -1,0 +1,14 @@
+#!/bin/sh
+set -e
+
+USER_SSH_DIR=$HOME/.ssh
+
+mkdir -p $USER_SSH_DIR
+chmod 0700 $USER_SSH_DIR
+
+cat >> $USER_SSH_DIR/authorized_keys <<EOF
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDgcf717VSFjRu2VctwtGYwWhJpQgXC2D5lJlJhyw1wgb812BX6gQ5VfjMXh44KsBkTmmtws8HxgKWHsQ9DbjYSzKpJA1UkKdiwBM2NGljZm88R8HDbqPoC3uoRhjt7OPqJN98BP1s8takfH+ZOqRFLUhsZl8DolqF3GJUgjbp2Lo6tf6mEGu1uCRDYM3xr1lJNJj+mf95L8/gea2HTecFmSe7J17eoa/fc1MT5NVJRIgXviYFX0HzKQjr2/NqfoDLz78gSv9PIQbjepNdB7YYuHDJz3htqbyY7t0osMsfTt0UHlVwziC9KBYneQysaZnX6cuZa11XjB3V5G+hacyyj m31271n@spike
+EOF
+chmod 0600 $USER_SSH_DIR/authorized_keys
+
+echo "Done."
