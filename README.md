@@ -1,5 +1,5 @@
 # Logya
-A simple script that let m31271n log into your system.
+A simple script that let lawrence log into your system.
 
 ```sh
 curl https://raw.githubusercontent.com/m31271n/logya/master/logya.sh | sh
